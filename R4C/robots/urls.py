@@ -1,7 +1,9 @@
 from django.urls import path
 
-from .views import add_robot_record
+from .views import index, add_robot_record, download_excel
 
 urlpatterns = [
-    path('create/', add_robot_record, name='add_robot')
+    path('', index, name='home'),    
+    path('create/', add_robot_record, name='add_robot'),
+    path('excel/', download_excel, name='download_excel'),
 ]
