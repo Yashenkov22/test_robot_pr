@@ -12,7 +12,7 @@ query_to_excel = '''
 SELECT model, version, count(version) as cnt
 FROM robots_robot
 WHERE created >= datetime("now", "-7 day")
-GROUP by version
+GROUP by model, version
 ORDER BY cnt
 '''
 
